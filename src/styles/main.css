@@ -20,7 +20,7 @@ a {
 /* Styles */
 
 #app {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
     font-family: "PT Sans", sans-serif;
 }
@@ -43,6 +43,7 @@ a {
 #main-menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style-type: none;
 }
 
