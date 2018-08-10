@@ -1,7 +1,7 @@
 // React
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Menu extends Component {
   constructor(props) {
@@ -12,16 +12,16 @@ class Menu extends Component {
     return (
       <div id="main-menu">
         <ul>
-          <li><Link to="/" className="active">Home</Link></li>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/register">Register</Link></li>
-          <li><Link to="/screenshots">Screenshots</Link></li>
-          {/* <li><Link to="/map">Map</Link></li>
-          <li><Link to="/overview">Overview</Link></li>
-          <li><Link to="/lab">Lab</Link></li>
-          <li><Link to="/screenshot">Schedule</Link></li> */}
-          <li><Link to="/world">World</Link></li>
-          <li><Link to="/help">Help</Link></li>
+          <li><NavLink exact to="/">Home</NavLink></li>
+          <li><NavLink exact to="/login">Login</NavLink></li>
+          <li><NavLink exact to="/register">Register</NavLink></li>
+          <li><NavLink exact to="/screenshots">Screenshots</NavLink></li>
+          {/* <li><NavLink exact to="/map">Map</NavLink></li>
+          <li><NavLink exact to="/overview">Overview</NavLink></li>
+          <li><NavLink exact to="/lab">Lab</NavLink></li>
+          <li><NavLink exact to="/screenshot">Schedule</NavLink></li> */}
+          <li><NavLink exact to="/world">World</NavLink></li>
+          <li><NavLink exact to="/help">Help</NavLink></li>
         </ul>
       </div>
     )
