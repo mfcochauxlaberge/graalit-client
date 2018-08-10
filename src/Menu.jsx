@@ -10,7 +10,7 @@ class Menu extends Component {
     return (
       <div id="main-menu">
         <ul>
-          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#" className="active">Home</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Register</a></li>
           <li><a href="#">Screenshots</a></li>
