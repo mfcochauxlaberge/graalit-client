@@ -9,7 +9,7 @@ ul, li, dl, dt, dd {
 
 /* Fonts */
 
-@import url("https://fonts.googleapis.com/css?family=MedievalSharp|PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans");
 
 /* Defaults */
 
@@ -32,7 +32,7 @@ a {
 #header h1 {
     padding: 10px 0;
     color: rgb(138, 138, 39);
-    font-family: MedievalSharp, sans-serif;
+    font-family: "Amatic SC", sans-serif;
 }
 
 #main-menu {
