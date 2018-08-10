@@ -1,3 +1,74 @@
-h1 {
-    color: red;
+/* Reset */
+
+body, html,
+hgroup, h1, h2, h3, h4, h5, h6,
+p,
+ul, li, dl, dt, dd {
+    margin: 0; padding: 0;
+}
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp|PT+Sans");
+
+/* Defaults */
+
+a {
+    color: #000;
+}
+
+/* Styles */
+
+#app {
+    width: 600px;
+    margin: auto;
+    font-family: "PT Sans", sans-serif;
+}
+
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    padding: 10px 0;
+    color: rgb(138, 138, 39);
+    font-family: MedievalSharp, sans-serif;
+}
+
+#main-menu {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+#main-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#main-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#main-menu a.active {
+    text-decoration: underline;
+}
+
+#main-menu a:hover {
+    text-decoration: underline;
+}
+
+#content {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+#footer {
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #000;
 }

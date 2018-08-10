@@ -1,10 +1,11 @@
+// React
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+// Styles
 import './styles/main.css'
 
-const App = () => {
-  return <h1>Graalit</h1>
-}
+// Components
+import App from './App.jsx'
 
 ReactDOM.render(<App />, document.getElementById('app'))
