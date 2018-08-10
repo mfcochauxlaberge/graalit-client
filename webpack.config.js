@@ -8,7 +8,10 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
+          query: {
+            plugins: ['transform-class-properties'],
+          },
+        },
       },
       {
         test: /\.css$/,
