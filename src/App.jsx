@@ -3,6 +3,9 @@ import React, { Component, Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 
+// Libs
+import { SessionProvider } from './lib/session.js'
+
 // Components
 import Menu from './Menu.jsx'
 import Home from './Home.jsx'
@@ -19,25 +22,27 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <Fragment>
-          <header id="header">
-            <h1>Graalit</h1>
-            <Menu />
-          </header>
-          <div id="content">
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/screenshots" component={Screenshots} />
-            <Route exact path="/world" component={World} />
-            <Route exact path="/help" component={Help} />
-          </div>
-          <footer id="footer">
-            <small>A game by <a href="https://mfcl.io">Marc-François</a>.</small>
-          </footer>
-        </Fragment>
-      </BrowserRouter>
+      <SessionProvider>
+        <BrowserRouter>
+          <Fragment>
+            <header id="header">
+              <h1>Graalit</h1>
+              <Menu />
+            </header>
+            <div id="content">
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/screenshots" component={Screenshots} />
+              <Route exact path="/world" component={World} />
+              <Route exact path="/help" component={Help} />
+            </div>
+            <footer id="footer">
+              <small>A game by <a href="https://mfcl.io">Marc-François</a>.</small>
+            </footer>
+          </Fragment>
+        </BrowserRouter>
+      </SessionProvider>
     )
   }
 }
