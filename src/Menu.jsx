@@ -34,7 +34,7 @@ class Menu extends Component {
                       <li><NavLink exact to="/map">Map</NavLink></li>
                       <li><NavLink exact to="/overview">Overview</NavLink></li>
                       <li><NavLink exact to="/lab">Lab</NavLink></li>
-                      <li><NavLink exact to="/screenshot">Schedule</NavLink></li>
+                      <li><NavLink exact to="/schedule">Schedule</NavLink></li>
                     </Fragment>
                   )
                 }
