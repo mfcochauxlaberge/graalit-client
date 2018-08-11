@@ -12,6 +12,10 @@ import Home from './Home.jsx'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import Screenshots from './Screenshots.jsx'
+import Map from './Map.jsx'
+import Overview from './Overview.jsx'
+import Lab from './Lab.jsx'
+import Schedule from './Schedule.jsx'
 import World from './World.jsx'
 import Help from './Help.jsx'
 
@@ -34,6 +38,10 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/screenshots" component={Screenshots} />
+              <Route exact path="/map" component={Map} />
+              <Route exact path="/overview" component={Overview} />
+              <Route exact path="/lab" component={Lab} />
+              <Route exact path="/schedule" component={Schedule} />
               <Route exact path="/world" component={World} />
               <Route exact path="/help" component={Help} />
             </div>
