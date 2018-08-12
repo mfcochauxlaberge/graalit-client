@@ -97,6 +97,22 @@ input[type=submit], button {
     padding: 10px;
 }
 
+#map {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.cell {
+    background: #b6d6b6;
+}
+
+.cell img {
+    width: 100%;
+    height: 100%;
+}
+
 #footer {
     padding: 10px;
     text-align: center;
