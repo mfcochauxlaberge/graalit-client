@@ -1,6 +1,5 @@
 // React
 import React, { Component, Fragment } from 'react'
-import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 
 // Libs
