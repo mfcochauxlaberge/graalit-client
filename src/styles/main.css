@@ -29,21 +29,28 @@ form {
     gap: 10px;
 }
 
-input, button {
+input, form button {
     display: block;
     width: 100%;
     padding: 10px;
+    font-family: "PT Sans", sans-serif;
     border: 1px solid #666;
     /* overflow: hidden; */
 }
 
-input[type=submit], button {
+input[type=submit], form button {
     flex-grow: 0;
     flex-shrink: 1;
     min-width: 0;
     cursor: pointer;
+    font-family: "PT Sans", sans-serif;
     color: #fff;
     background: #666;
+}
+
+button {
+    font-family: "PT Sans", sans-serif;
+    cursor: pointer;
 }
 
 /* Styles */
