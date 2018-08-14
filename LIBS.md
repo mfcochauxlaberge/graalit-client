@@ -24,10 +24,18 @@ The JSONAPI fetcher lives in `src/lib/jsonapistore.js`.
 
 The JSONAPI store is a simple key-value store. The key is a URL and the value is the data that was returned. It is therefore important for the backend to return the same data given the same URL, unless of course the data in the database has changed. In other words, developers should avoid URLs like `/users/me` that returns info about the user that made the request.
 
+## JSONAPIModels
+
+This is where models will be stored. Then, the JSONAPI store and fetcher can use it.
+
+It will also make sure that the models are valid and the relationships make sense.
+
+See `src/lib/jsonapimodels.js` for an implementation.
+
+The declaration files should look like what is done in Ember.
+
 ## Notes and questions
 
 These libraries contain both logic and some code that depends on React. This is not ideal. Once the libraries have matured, I will try to separate the core with the React part so that each library can at the same time have its own package and not need React.
-
-It is still unclear to me wether the models should be declared in the fetcher, the store, or outside. The declaration should probably look like how it is done in Ember. But where?
 
 Also, should the user use the fetcher which uses the store for caching? Or should the user use the store which uses the fetcher when it does not have what is asked? I'll have to think about that.
