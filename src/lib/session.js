@@ -49,6 +49,18 @@ class SessionProvider extends Component {
 
             return {};
           },
+
+          deleteToken: () => {
+            console.log(`Deleting token for ${this.state.username} (which never existed anyway).`)
+
+            this.setState(() => {
+              return {
+                loggedIn: false,
+                username: '',
+                claims: {},
+              }
+            })
+          }
         }}
       >
         {this.props.children}
