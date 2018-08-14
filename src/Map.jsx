@@ -20,7 +20,7 @@ class Map extends Component {
           {
             times(16, (n) => {
               return (
-                <div className="cell">
+                <div key={n} className="cell">
                   <img src={Empty} alt="Empty cell" />
                 </div>
               )
