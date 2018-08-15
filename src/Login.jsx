@@ -61,10 +61,6 @@ class Login extends Component {
   onChangeUsername = (e) => this.setState({ username: e.target.value })
 
   onChangePassword = (e) => this.setState({ password: e.target.value })
-
-  onLogin = (e) => {
-    e.preventDefault()
-  }
 }
 
 export default Login
