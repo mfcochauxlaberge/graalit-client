@@ -1,5 +1,6 @@
 // React
 import React, { Component, Fragment } from 'react'
+import { Redirect } from 'react-router-dom'
 
 // Libs
 import { SessionContext } from './lib/session'
@@ -19,35 +20,39 @@ class Login extends Component {
       <Fragment>
         <h2>Login</h2>
         <SessionContext.Consumer>
-          {(context) => (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-
-                context.getToken({
-                  username: this.state.username,
-                  password: this.state.password,
-                })
-              }}
-            >
-              <input
-                type="text"
-                placeholder="Username"
-
-                onChange={this.onChangeUsername}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-
-                onChange={this.onChangePassword}
-              />
-              <input
-                type="submit"
-                value="Log in"
-              />
-            </form>
-          )}
+          {(context) => {
+            if (context.loggedIn) {
+              return <Redirect to="/map" />
+            } else {
+              return (
+                <form
+                  onSubmit={(e) => {
+                    context.getToken({
+                      username: this.state.username,
+                      password: this.state.password,
+                    })
+                  }}
+                >
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    
+                    onChange={this.onChangeUsername}
+                    />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    
+                    onChange={this.onChangePassword}
+                    />
+                  <input
+                    type="submit"
+                    value="Log in"
+                    />
+                </form>
+              )
+            }
+          }}
         </SessionContext.Consumer>
       </Fragment>
     )
