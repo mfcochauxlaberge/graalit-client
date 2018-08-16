@@ -17,15 +17,13 @@ class Map extends Component {
       <Fragment>
         <h2>Map</h2>
         <div id="map">
-          {
-            times(16, (n) => {
-              return (
-                <div key={n} className="cell">
-                  <img src={Empty} alt="Empty cell" />
-                </div>
-              )
-            })
-          }
+          {times(16, n => {
+            return (
+              <div key={n} className="cell">
+                <img src={Empty} alt="Empty cell" />
+              </div>
+            )
+          })}
         </div>
       </Fragment>
     )

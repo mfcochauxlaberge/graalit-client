@@ -20,13 +20,13 @@ class Login extends Component {
       <Fragment>
         <h2>Login</h2>
         <SessionContext.Consumer>
-          {(context) => {
+          {context => {
             if (context.loggedIn) {
               return <Redirect to="/map" />
             } else {
               return (
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={e => {
                     context.getToken({
                       username: this.state.username,
                       password: this.state.password,
@@ -36,19 +36,14 @@ class Login extends Component {
                   <input
                     type="text"
                     placeholder="Username"
-                    
                     onChange={this.onChangeUsername}
-                    />
+                  />
                   <input
                     type="password"
                     placeholder="Password"
-                    
                     onChange={this.onChangePassword}
-                    />
-                  <input
-                    type="submit"
-                    value="Log in"
-                    />
+                  />
+                  <input type="submit" value="Log in" />
                 </form>
               )
             }
@@ -58,9 +53,9 @@ class Login extends Component {
     )
   }
 
-  onChangeUsername = (e) => this.setState({ username: e.target.value })
+  onChangeUsername = e => this.setState({ username: e.target.value })
 
-  onChangePassword = (e) => this.setState({ password: e.target.value })
+  onChangePassword = e => this.setState({ password: e.target.value })
 }
 
 export default Login

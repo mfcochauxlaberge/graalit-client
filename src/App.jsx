@@ -33,15 +33,21 @@ class App extends Component {
               <div>
                 <div>
                   <SessionContext.Consumer>
-                    {(context) => (
-                      (context.loggedIn &&
+                    {context =>
+                      context.loggedIn && (
                         <div id="info-left">
-                          <span><b>0</b> coins</span>
-                          <span><b>0</b> people</span>
-                          <span><b>0</b> energy</span>
+                          <span>
+                            <b>0</b> coins
+                          </span>
+                          <span>
+                            <b>0</b> people
+                          </span>
+                          <span>
+                            <b>0</b> energy
+                          </span>
                         </div>
                       )
-                    )}
+                    }
                   </SessionContext.Consumer>
                 </div>
                 <div>
@@ -49,15 +55,25 @@ class App extends Component {
                 </div>
                 <div>
                   <SessionContext.Consumer>
-                    {(context) => (
-                      (context.loggedIn &&
+                    {context =>
+                      context.loggedIn && (
                         <div id="info-right">
-                          <span><b>markkosho</b></span>
-                          <span><NavLink exact to="/account">Account</NavLink></span>
-                          <span><button onClick={context.deleteToken}>Logout</button></span>
+                          <span>
+                            <b>markkosho</b>
+                          </span>
+                          <span>
+                            <NavLink exact to="/account">
+                              Account
+                            </NavLink>
+                          </span>
+                          <span>
+                            <button onClick={context.deleteToken}>
+                              Logout
+                            </button>
+                          </span>
                         </div>
                       )
-                    )}
+                    }
                   </SessionContext.Consumer>
                 </div>
               </div>
@@ -77,7 +93,9 @@ class App extends Component {
               <Route exact path="/account" component={Account} />
             </div>
             <footer id="footer">
-              <small>A game by <a href="https://mfcl.io">Marc-François</a>.</small>
+              <small>
+                A game by <a href="https://mfcl.io">Marc-François</a>.
+              </small>
             </footer>
           </Fragment>
         </BrowserRouter>

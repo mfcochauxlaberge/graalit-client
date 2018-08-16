@@ -17,7 +17,9 @@ class SessionProvider extends Component {
 
     this.refreshToken = () => {
       if (this.state.loggedIn) {
-        console.log(`Refreshing token for ${this.state.username} (not for real)`)
+        console.log(
+          `Refreshing token for ${this.state.username} (not for real)`,
+        )
       }
 
       delay(this.refreshToken, 1000 * 60)
@@ -37,7 +39,9 @@ class SessionProvider extends Component {
           claims: this.state.claims,
 
           getToken: ({ username, password }) => {
-            console.log(`Getting token for ${username} with password ${password} (not for real)`)
+            console.log(
+              `Getting token for ${username} with password ${password} (not for real)`,
+            )
 
             this.setState(() => {
               return {
@@ -47,11 +51,15 @@ class SessionProvider extends Component {
               }
             })
 
-            return {};
+            return {}
           },
 
           deleteToken: () => {
-            console.log(`Deleting token for ${this.state.username} (which never existed anyway).`)
+            console.log(
+              `Deleting token for ${
+                this.state.username
+              } (which never existed anyway).`,
+            )
 
             this.setState(() => {
               return {
@@ -60,7 +68,7 @@ class SessionProvider extends Component {
                 claims: {},
               }
             })
-          }
+          },
         }}
       >
         {this.props.children}
@@ -69,4 +77,4 @@ class SessionProvider extends Component {
   }
 }
 
-export { SessionContext, SessionProvider}
+export { SessionContext, SessionProvider }
