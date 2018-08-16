@@ -6,6 +6,20 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
+        enforce: 'pre',
+        use: {
+          loader: 'prettier-loader',
+          options: {
+            parser: 'babylon',
+            semi: false,
+            singleQuote: true,
+            trailingComma: 'all',
+          },
+        }
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           query: {
