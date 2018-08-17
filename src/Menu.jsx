@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import { NavLink } from 'react-router-dom'
 
 // Libs
-import { SessionContext } from './lib/session'
+import { SessionContext } from './lib/session.js'
 
 class Menu extends Component {
   constructor(props) {

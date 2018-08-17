@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 import { Redirect } from 'react-router-dom'
 
 // Libs
-import { SessionContext } from './lib/session'
+import { SessionContext } from './lib/session.js'
 
 class Login extends Component {
   constructor(props) {
