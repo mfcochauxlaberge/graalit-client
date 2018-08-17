@@ -1,22 +1,9 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const PrettierWebpackPlugin = require('prettier-webpack-plugin')
 
 module.exports = {
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        enforce: 'pre',
-        use: {
-          loader: 'prettier-loader',
-          options: {
-            parser: 'babylon',
-            semi: false,
-            singleQuote: true,
-            trailingComma: 'all',
-          },
-        }
-      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -40,6 +27,13 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+    }),
+    new PrettierWebpackPlugin({
+      parser: 'babylon',
+      semi: false,
+      singleQuote: true,
+      trailingComma: 'all',
+      extensions: ['.js', '.jsx'],
     }),
   ],
   devServer: {
