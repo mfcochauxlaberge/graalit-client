@@ -23,9 +23,26 @@ form,
 label,
 input,
 select,
-option {
+option,
+table,
+thead,
+tbody,
+tfoot,
+th,
+tr,
+td {
   margin: 0;
   padding: 0;
+}
+
+table,
+thead,
+tbody,
+tfoot,
+th,
+tr,
+td {
+  text-align: left;
 }
 
 /* Fonts */
