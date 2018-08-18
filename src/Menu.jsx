@@ -54,8 +54,8 @@ class Menu extends Component {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink exact to="/lab">
-                        Lab
+                      <NavLink exact to="/council">
+                        Council
                       </NavLink>
                     </li>
                     <li>
