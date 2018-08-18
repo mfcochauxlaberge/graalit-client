@@ -43,6 +43,7 @@ th,
 tr,
 td {
   text-align: left;
+  border-collapse: collapse;
 }
 
 /* Fonts */
