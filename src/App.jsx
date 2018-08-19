@@ -43,7 +43,7 @@ class App extends Component {
                             <b>0</b> people
                           </span>
                           <span>
-                            <b>0</b> energy
+                            <b>0</b> messsages
                           </span>
                         </div>
                       )
