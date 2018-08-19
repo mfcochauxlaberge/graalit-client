@@ -37,7 +37,7 @@ class App extends Component {
                       context.loggedIn && (
                         <div id="info-left">
                           <span>
-                            <b>Mark Kosho</b>
+                            <b>No Name</b>
                           </span>
                           <span>
                             <b>0</b> coins
@@ -59,7 +59,7 @@ class App extends Component {
                       context.loggedIn && (
                         <div id="info-right">
                           <span>
-                            <b>markkosho</b>
+                            <b>noname</b>
                           </span>
                           <span>
                             <NavLink exact to="/account">
