@@ -37,13 +37,13 @@ class App extends Component {
                       context.loggedIn && (
                         <div id="info-left">
                           <span>
+                            <b>Mark Kosho</b>
+                          </span>
+                          <span>
                             <b>0</b> coins
                           </span>
                           <span>
                             <b>0</b> people
-                          </span>
-                          <span>
-                            <b>0</b> messsages
                           </span>
                         </div>
                       )
