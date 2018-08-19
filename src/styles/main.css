@@ -46,6 +46,10 @@ td {
   border-collapse: collapse;
 }
 
+table {
+  width: 100%;
+}
+
 /* Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans');
