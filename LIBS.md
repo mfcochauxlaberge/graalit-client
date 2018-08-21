@@ -18,6 +18,44 @@ Models have to be defined beforehand.
 
 The goal is to have simple methods that accept obvious arguments like `type`, `id`, `filter`, `sort`, etc. That is all the user has to know. Behind the curtains, the library fetches the data and returns it (or an error). It uses the JSONAPIStore to cache the data it acquired.
 
+Example of how the module could be used:
+
+```
+JSONAPIFetcher.getMany({
+    type: 'comments',
+    fields: {
+        comments: ['author', 'content', 'written-at'],
+    },
+    filter: {
+        op: 'and',
+        val: [
+            {
+                field: 'author',
+                op: '=',
+                val: 'user1',
+            },
+            {
+                field: 'articles',
+                op: 'in',
+                val: ['article1', 'article2'],
+            },
+        ],
+    },
+    sort: ['written-at'],
+    pageNumber: 0,
+    pageSize: 20,
+    include: ['author'],
+})
+.then(response => {
+    this.setState(() => {
+        return { comments: response.data }
+    })
+})
+.catch(err => {
+    console.log(`Error getting articles: ${err}`)
+})
+```
+
 ## JSONAPIStore
 
 The JSONAPI fetcher lives in `src/lib/jsonapistore.js`.
