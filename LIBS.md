@@ -66,7 +66,7 @@ JSONAPIFetcher.getMany({
     })
 })
 .catch(err => {
-    console.log(`Error getting articles: ${err}`)
+    console.log(`Error getting comments: ${err}`)
 })
 ```
 
