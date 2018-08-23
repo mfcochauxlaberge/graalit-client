@@ -21,6 +21,20 @@ The goal is to have simple methods that accept obvious arguments like `type`, `i
 Example of how the module could be used:
 
 ```
+JSONAPIFetcher.getMany('/articles?sort=published-at&page[size]=10&page[number]=2')
+.then(response => {
+    this.setState(() => {
+        return { articles: response.data }
+    })
+})
+.catch(err => {
+    console.log(`Error getting articles: ${err}`)
+})
+```
+
+Or a more complex example:
+
+```
 JSONAPIFetcher.getMany({
     type: 'comments',
     fields: {
