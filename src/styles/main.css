@@ -52,7 +52,7 @@ table {
 
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Metamorphous|PT+Sans');
 
 /* Defaults */
 
@@ -118,8 +118,12 @@ td {
 
 #header h1 {
   padding: 10px 0;
-  color: rgb(138, 138, 39);
-  font-family: 'Amatic SC', sans-serif;
+  color: #ccc;
+  letter-spacing: 5px;
+  font-family: 'Metamorphous', sans-serif;
+  font-size: 40px;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
+    5px 5px 0 #000, 6px 6px 0 #000;
 }
 
 #header #info-left,
