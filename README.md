@@ -10,7 +10,7 @@ This project is also an opportunity to write some libraries to deal with JWT tok
 
 ## Install
 
-Clone this repository and install its dependencies with `npm install`.
+Clone this repository and install its dependencies with `npm ci` (not `npm i` which might modify `package-lock.json`).
 
 ## Development
 
