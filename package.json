@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "format": "prettier --single-quote=true --trailing-comma=all --semi=false --write \"**/*.{js,jsx,css}\"",
-    "format-watch": "onchange \"**/*.js\" \"**/*.jsx\" -- prettier --single-quote=true --trailing-comma=all --semi=false --write {{changed}}",
+    "format-watch": "onchange \"**/*.js\" \"**/*.jsx\" \"**/*.css\" -- prettier --single-quote=true --trailing-comma=all --semi=false --write {{changed}}",
     "start": "concurrently --kill-others \"webpack-dev-server --mode development\" \"npm:*-watch\"",
     "test": "jest",
     "test-onchange": "onchange \"**/*.js\" \"**/*.jsx\" -- npm test"
