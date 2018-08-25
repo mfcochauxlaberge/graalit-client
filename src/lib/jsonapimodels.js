@@ -77,7 +77,6 @@ class JSONAPIModels {
       Object.keys(model.relationships).forEach(relName => {
         const rel = model.relationships[relName]
 
-        console.log('${model.type}.${relName}', `${model.type}.${relName}`)
         if (!this.checkExistence(`${model.type}.${relName}`)) {
           throw new Error(`${model.type}.${relName} is invalid`)
         }
