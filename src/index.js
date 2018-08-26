@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Styles
-import './styles/main.css'
+import './styles/main.scss'
 
 // Components
 import App from './App.jsx'
