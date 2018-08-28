@@ -94,7 +94,12 @@ class App extends Component {
             </div>
             <footer id="footer">
               <small>
-                A game by <a href="https://mfcl.io">Marc-François</a>.
+                A game by <a href="https://mfcl.io">Marc-François</a>.<br />
+                Check out the{' '}
+                <a href="https://github.com/mfcochauxlaberge/graalit-client">
+                  source code
+                </a>
+                .
               </small>
             </footer>
           </Fragment>
