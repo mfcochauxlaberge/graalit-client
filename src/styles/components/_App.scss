@@ -1,0 +1,69 @@
+#app {
+  max-width: 600px;
+  margin: auto;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#header {
+  text-align: center;
+}
+
+#header > div:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#header h1 {
+  padding: 10px 0;
+  color: #ccc;
+  letter-spacing: 5px;
+  font-family: 'Metamorphous', sans-serif;
+  font-size: 40px;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
+    5px 5px 0 #000, 6px 6px 0 #000;
+}
+
+#header #info-left,
+#header #info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#header #info-left span,
+#header #info-right span {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+#header #info-left span {
+  text-align: left;
+}
+
+#header #info-right span {
+  text-align: right;
+}
+
+#header #info-right button,
+#header #info-left button {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 12px;
+  text-decoration: underline;
+  border: none;
+  background: none;
+}
+
+#content {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+#footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 2px solid #000;
+}

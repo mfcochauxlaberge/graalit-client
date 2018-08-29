@@ -5,6 +5,9 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 // Libs
 import { SessionProvider, SessionContext } from './lib/session.js'
 
+// Styles
+import AppStyles from './styles/components/_App.scss'
+
 // Components
 import Menu from './Menu.jsx'
 import Home from './Home.jsx'
@@ -28,14 +31,14 @@ class App extends Component {
     return (
       <SessionProvider>
         <BrowserRouter>
-          <Fragment>
-            <header id="header">
+          <div id={AppStyles.app}>
+            <header id={AppStyles.header}>
               <div>
                 <div>
                   <SessionContext.Consumer>
                     {context =>
                       context.loggedIn && (
-                        <div id="info-left">
+                        <div id={AppStyles['info-left']}>
                           <span>
                             <b>No Name</b>
                           </span>
@@ -57,7 +60,7 @@ class App extends Component {
                   <SessionContext.Consumer>
                     {context =>
                       context.loggedIn && (
-                        <div id="info-right">
+                        <div id={AppStyles['info-right']}>
                           <span>
                             <b>noname</b>
                           </span>
@@ -79,7 +82,7 @@ class App extends Component {
               </div>
               <Menu />
             </header>
-            <div id="content">
+            <div id={AppStyles.content}>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
@@ -92,7 +95,7 @@ class App extends Component {
               <Route exact path="/help" component={Help} />
               <Route exact path="/account" component={Account} />
             </div>
-            <footer id="footer">
+            <footer id={AppStyles.footer}>
               <small>
                 A game by <a href="https://mfcl.io">Marc-François</a>.<br />
                 Check out the{' '}
@@ -102,7 +105,7 @@ class App extends Component {
                 .
               </small>
             </footer>
-          </Fragment>
+          </div>
         </BrowserRouter>
       </SessionProvider>
     )

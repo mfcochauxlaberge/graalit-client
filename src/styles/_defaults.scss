@@ -1,0 +1,46 @@
+/* Defaults */
+
+@import url('https://fonts.googleapis.com/css?family=Metamorphous|PT+Sans');
+
+a {
+  color: #000;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+input,
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif;
+  border: 1px solid #666;
+  /* overflow: hidden; */
+}
+
+input[type='submit'],
+form button {
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 0;
+  cursor: pointer;
+  font-family: 'PT Sans', sans-serif;
+  color: #fff;
+  background: #666;
+}
+
+button {
+  font-family: 'PT Sans', sans-serif;
+  cursor: pointer;
+}
+
+th,
+td {
+  padding: 4px;
+  border: 1px solid #eee;
+}
