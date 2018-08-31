@@ -4,6 +4,10 @@ import React, { Component, Fragment } from 'react'
 // Util
 import ProgressBar from './util/ProgressBar.jsx'
 
+// Styles
+import UtilStyles from './styles/_Util.scss'
+import ProgressBarStyles from './styles/util/_ProgressBar.scss'
+
 class Overview extends Component {
   constructor(props) {
     super(props)
@@ -13,7 +17,7 @@ class Overview extends Component {
     return (
       <Fragment>
         <h2>Overview</h2>
-        <table className="overview-table-h">
+        <table className={UtilStyles['overview-table-h']}>
           <tbody>
             <tr>
               <th>Ruler</th>
@@ -26,7 +30,7 @@ class Overview extends Component {
           </tbody>
         </table>
         <h3>Population</h3>
-        <table className="overview-table-h">
+        <table className={UtilStyles['overview-table-h']}>
           <tbody>
             <tr>
               <th>Number of people</th>
@@ -47,7 +51,7 @@ class Overview extends Component {
           </tbody>
         </table>
         <h3>Infrastructure</h3>
-        <table className="overview-table">
+        <table className={UtilStyles['overview-table']}>
           <thead>
             <tr>
               <th>Name</th>
@@ -104,7 +108,7 @@ class Overview extends Component {
             <b>Focus:</b> Nothing
           </span>
         </div>
-        <table className="overview-table">
+        <table className={UtilStyles['overview-table']}>
           <thead>
             <tr>
               <th>Name</th>
@@ -117,55 +121,83 @@ class Overview extends Component {
               <td>Agriculture</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="20" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="20"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Alchemy</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="60" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="60"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Construction</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="70" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="70"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Dragon breeding</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="30" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="30"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Military training</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="40" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="40"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Security</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="30" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="30"
+                  max="100"
+                />
               </td>
             </tr>
             <tr>
               <td>Surveillance</td>
               <td>0</td>
               <td>
-                <ProgressBar className="progress-bar" value="50" max="100" />
+                <ProgressBar
+                  className={ProgressBarStyles['progress-bar']}
+                  value="50"
+                  max="100"
+                />
               </td>
             </tr>
           </tbody>
         </table>
         <h3>Military</h3>
-        <table className="overview-table">
+        <table className={UtilStyles['overview-table']}>
           <thead>
             <tr>
               <th>Unit</th>
