@@ -1,22 +1,2 @@
 @import '_reset.scss';
 @import '_defaults.scss';
-
-/* Styles */
-
-.overview-table {
-  table-layout: fixed;
-}
-
-.overview-table-h th {
-  width: 33.33333%;
-}
-
-.progress-bar {
-  height: 20px;
-  border: 1px solid #ddd;
-}
-
-.progress-bar div {
-  height: 100%;
-  background: #eee;
-}
