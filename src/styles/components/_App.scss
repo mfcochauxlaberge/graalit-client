@@ -37,12 +37,12 @@
   font-size: 12px;
 }
 
-#header #info-left span {
-  text-align: left;
+#header #info-left {
+  align-items: flex-start;
 }
 
-#header #info-right span {
-  text-align: right;
+#header #info-right {
+  align-items: flex-end;
 }
 
 #header #info-right button,
