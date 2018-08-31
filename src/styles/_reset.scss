@@ -1,0 +1,51 @@
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+hgroup,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+form,
+label,
+input,
+select,
+option,
+table,
+thead,
+tbody,
+tfoot,
+th,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+thead,
+tbody,
+tfoot,
+th,
+tr,
+td {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}

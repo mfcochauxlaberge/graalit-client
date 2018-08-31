@@ -4,6 +4,9 @@ import React, { Component, Fragment } from 'react'
 // Libs
 import { times } from 'lodash'
 
+// Styles
+import MapStyles from './styles/components/_Map.scss'
+
 // Infrastructure
 import Empty from './assets/img/infrastructure/empty.png'
 
@@ -16,10 +19,10 @@ class Map extends Component {
     return (
       <Fragment>
         <h2>Map</h2>
-        <div id="map">
+        <div id={MapStyles.map}>
           {times(25, n => {
             return (
-              <div key={n} className="cell">
+              <div key={n} className={MapStyles.cell}>
                 <img src={Empty} alt="Empty cell" />
               </div>
             )

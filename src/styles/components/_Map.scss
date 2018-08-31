@@ -1,0 +1,15 @@
+#map {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.cell {
+  background: #b6d6b6;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+}

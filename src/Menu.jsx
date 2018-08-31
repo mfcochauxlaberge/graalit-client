@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom'
 // Libs
 import { SessionContext } from './lib/session.js'
 
+// Styles
+import MenuStyles from './styles/components/_Menu.scss'
+
 class Menu extends Component {
   constructor(props) {
     super(props)
@@ -12,7 +15,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div id="main-menu">
+      <div id={MenuStyles['main-menu']}>
         <ul>
           <li>
             <NavLink exact to="/">

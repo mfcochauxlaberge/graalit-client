@@ -1,0 +1,26 @@
+#main-menu {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+#main-menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+#main-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#main-menu a.active {
+  text-decoration: underline;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
